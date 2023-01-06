@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+/* 
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Playfair Display', serif;
+
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Layout 
+-------------------------*/
+
+.section,
+.header,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+
+/* Box-sizing
+------------------------ */
+.container {
+  max-width: 1128px;
+}
+
+.header {
+  height: 100vh;
+  padding: 0rem 2rem;
+}
+.section {
+  padding: 2rem 2rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.image {
+  max-width: 100%;
+}
+
+/* Customization
+------------------------ */
+.header {
+  background-color: #F3EED9;
+}
+
+.section-2 {
+  background-color: #222C2A;
+}
+
+.section-3 {
+  background-color: #824936 ;
+}
+
+/* Typography
+------------------------ */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.header__sub-title {
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+}
+
+.header__title {
+  font-size: 1.7rem;
+  font-family: 'Playfair Display', serif;
+  color: #824936 ;
+}
+
+
+
+
+.title--dark {
+  color:#824936
+}
+
+.title--light {
+  color: #fff;
+}
+
+.text--light {
+  color: #fff;
+}
+
+.text--dark {
+  color: #222C2A;
+}
+
+.section {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  /* Layout 
+  -------------------------*/
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .container {
+    gap: 3rem;
+  }
+
+
+  /* Box-sizing
+  -------------------------*/
+  .section {
+    padding: 8rem 2rem;
+  }
+
+
+  .text-container,
+  .image--container {
+    max-width: 50%;
+  }
+
+
+
+  /* Customization
+  -------------------------*/
+
+  /* Typography
+  -------------------------*/
+  .header__title {
+    font-size: 3rem;
+  }
+  .text-container,
+  .title {
+    text-align: start;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+}
+

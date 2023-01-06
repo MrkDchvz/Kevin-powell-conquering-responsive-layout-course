@@ -1,0 +1,556 @@
+/* font-family: 'Oswald', sans-serif;
+   font-family: 'Montserrat', sans-serif; */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Root
+--------------------------*/
+:root {
+  /* Font families */
+  --ff-main: 'Oswald', sans-serif;
+  --ff-secondary: 'Montserrat', sans-serif;
+
+  /* colors */
+  --clr-white: #ffffff;
+  --clr-darkest: #2E323F;
+  --clr-darker: #3B4050;
+  --clr-dark: #3B4050;
+  --clr-accent: #A59678;
+
+  /* Font size */
+  --fs-1: 5.625rem;
+  --fs-2: 2.25rem;
+  --fs-3: 1.875rem;
+  --fs-4: 1.5rem;
+  --fs-5: 1.3125px;
+  --fs-6: 1.125rem;
+  --fs-7: 1rem;
+
+  /* Font-weight */
+  --fw-bold: 700;
+  --fw-regular: 400;
+}
+
+/* Global
+-------------------------*/
+
+/* Layout */
+
+/* .row {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+} */
+
+/* Box Model */
+
+
+
+.container {
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* text colors */
+
+.text--light {
+  color: var(--clr-white);
+}
+
+.text--dark {
+  color: var(--clr-darker);
+}
+
+.text--accent {
+  color: var(--clr-accent);
+}
+
+.title--light {
+  color: var(--clr-white);
+}
+
+.title--dark {
+  color: var(--clr-accent);
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-dark);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.wrapper {
+  display: inline-block;
+}
+
+/*Navigation
+------------------------------------ */
+.header {
+  background-color: var(--clr-darkest);
+  padding: 1rem 2rem;
+}
+
+.header__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.nav {
+  /* Display */
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* Positioning */
+  position: relative;
+  left: 0;
+  top: 0;
+
+  /* Box Model */
+  height: 0px;
+  width: 100%;
+  padding: 1rem;
+
+  /* Typography */
+  text-align: center;
+
+  /* Misc */
+  background-color: var(--clr-darkest);
+}
+
+.nav.toggled {
+  display: flex;
+  height: auto;
+}
+
+.nav__list {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* Box Model */
+  margin: 0;
+  /* Typography */
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+.nav__link--button {
+  background-color: var(--clr-accent);
+  padding: .3rem 1.4rem;
+  border-radius: 20px;
+}
+
+/*-----Nav Hamburger-----*/
+
+.nav__toggle {
+  /* Display */
+  display: block;
+
+  /* Box Model */
+  width: 36px;
+  border: none;
+  margin-bottom: 5px;
+
+  /* Misc */
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.nav__toggle::before,
+.nav__toggle::after {
+  display: block;
+  content: "";
+}
+
+.nav__toggle::before,
+.hamburger,
+.nav__toggle::after
+  {
+  /* Box Model  */
+  height: 4px;
+  width: 100%;
+  margin: 5px 0;
+
+  /* Misc */
+  border-radius: 10px;
+  background-color: white;
+  
+}
+/*------ Nav Humburger Toggled-------*/
+
+.nav__toggle.toggled .hamburger {
+  visibility: hidden;
+}
+.nav__toggle.toggled::before {
+  transform: translate( 0px, 10px) rotate(-45deg);
+}
+
+.nav__toggle.toggled::after {
+  transform: translate( 0px, -8px) rotate(45deg);
+}
+
+
+.image {
+  max-width: 100%;
+}
+
+/* Intro Section
+-------------------------------*/
+
+.section--title {
+  /* Display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Box Model */
+  min-height: 100vh ;
+
+  /* Misc */
+  background-color: var(--clr-darker);
+}
+
+.container--intro {
+  /* Box Model */
+  max-width: 890px;
+  padding: 2rem;
+
+  /* Typography */
+  text-align: center;
+  color: var(--clr-white);
+
+  /* Misc */
+  background-color: var(--clr-darker);
+}
+.main-title {
+  font-family: var(--ff-main);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-bold);
+}
+
+.text-container {
+  margin-top: 1rem;
+}
+
+.text-description {
+  /* Box Model */
+  margin-bottom: 1.2rem;
+
+  /* Typography */
+  font-weight: var(--fw-regular);
+
+}
+
+.link__button {
+  /* Box Model */
+  padding: .3em 1em;
+
+  /* Typography */
+  text-transform: uppercase;
+  font-family: var(--ff-main);
+
+  /* Misc */
+  border-radius: 20px;
+  background-color: var(--clr-accent);
+
+}
+
+/* Features Section
+-------------------------------*/
+.container--features {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  /* Typography */
+  text-align: center;
+
+  /* Misc */
+  background-color: #f1f1f1;
+}
+
+.features__text {
+  max-width: 600px;
+}
+
+.feature__title {
+  /* Box model */
+  margin-bottom: 1.5rem;
+
+  /* Typography */
+  font-family: var(--ff-main);
+}
+
+/* Motivation Section 
+-------------------------------*/
+
+.container--motivation {
+  background-color: var(--clr-white);
+}
+/*---Article---*/
+
+.article {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+
+  /* Box Model */
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.paragraph {
+  line-height: 2rem;
+}
+
+/*---Side bar---*/
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.side-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* Box Model */
+  min-height: 250px;
+  /* Typography */
+  color: var(--clr-white);
+  text-align: center;
+
+  /* Misc */
+  background-color: var(--clr-darker);
+}
+
+.side-bar__title {
+  /* Box Model */
+  margin-bottom: 2rem;
+  /* Typography */
+  font-size: var(--fs-4);
+  font-family: var(--ff-main);
+}
+
+.side-bar__text {
+  max-width: 85%;
+}
+
+/* Footer
+  ---------------------- */
+  .footer {
+    background-color: var(--clr-darker);
+  }
+
+  .container--footer {
+    text-align: center;
+    color: var(--clr-white);
+    
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .footer__title,
+  .footer__sub-title {
+    font-family: var(--ff-main);
+    margin-bottom: 1rem;
+  }
+
+
+  .footer__title {
+    font-size: var(--fs-3);
+  }
+
+  .footer__sub-title {
+    color: var(--clr-accent);
+    font-size: var(--fs-4);
+  }
+
+
+  .footer__text {
+    max-width: 400px;
+  }
+
+  .footer__item + .footer__item {
+    margin-top: 1rem;
+  }
+
+  .footer__link {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+  }
+
+  
+
+
+
+
+/*---------------------------------------------- */
+/*------------------- Tablet L ----------------- */
+/*---------------------------------------------- */
+@media (min-width: 700px) {
+  /* Intro Section 
+  ------------------------ */
+  .container--intro {
+    display: flex;
+    text-align: start;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .main-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .text-description {
+    font-size: 1.05rem;
+  }
+
+  /* Features Section
+  ---------------------- */
+  .container--features {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 3rem;
+    min-height: 50vh
+  }
+
+  /* Motivation Section 
+  ---------------------- */
+
+  /*---Side bar---*/
+  .side-bar {
+    flex-direction: row;
+  }
+
+  /* Footer
+  ---------------------- */
+  .footer__container {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    text-align: start;
+
+    padding: 3rem;
+  }
+
+  .footer__title {
+    font-size: 3rem;
+  }
+
+  .footer__sub-title {
+    font-size: 1rem;
+  }
+
+  .footer__text,
+  .footer__link {
+    font-size: .3rem;
+  }
+}
+
+/*---------------------------------------------- */
+/*------------------- DESKTOP ------------------ */
+/*---------------------------------------------- */
+@media (min-width: 1000px) {
+
+  /*Navigation
+  ----------------------------- */
+  .nav__toggle {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+    padding:  0;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Motivation Section 
+  ---------------------- */ 
+  .container--motivation {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  /*---side bar---*/
+  .side-bar {
+    flex-direction: column;
+  }
+
+  .side-bar__container {
+    max-width: 100%;
+  }
+
+
+  
+}

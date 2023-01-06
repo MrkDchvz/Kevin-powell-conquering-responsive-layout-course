@@ -1,0 +1,148 @@
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Roboto:wght@400;700;900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font weights */
+    --black: 900;
+    --regular: 400;
+    
+    /* Font Sizes */
+    --small: 21px;
+    --medium: 36px;
+    --large: 48px;
+}
+
+/* CLASESS */
+
+.fw-black { font-weight: var(--black); }
+.fw-regular { font-weight: var(--regular); }
+
+.fs-small { font-size: var(--small); }
+.fs-medium { font-size: var(--medium); }
+.fs-large { font-size: var(--large); }
+
+.clr-bluegreen {color: #136C72;}
+.clr-white {color: #ffff;}
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 38%;
+    align-self: flex-start;
+}
+
+.hero__img > img {
+    width: 100%;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.main {
+    
+    margin-top: 2rem ;
+}
+
+.content__container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: 38%;
+    text-align: center;
+    background-color: #136C72;
+    padding: 1.7rem;
+   
+}
+
+.content__main {
+    width: 62%;
+}
